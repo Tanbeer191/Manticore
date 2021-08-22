@@ -1,12 +1,12 @@
 name: main
 on:
   workflow_dispatch:
-
+  
 jobs:
   build:
-  runs-on: macos-latest
+   runs-on: macos-latest
 
-    steps:
+   steps:
       - uses: actions/checkout@v2
 
       - name: Build
@@ -16,8 +16,8 @@ jobs:
           cp -r build/Release-iphoneos/manticore.app Payload/
           zip -vr Manticore.ipa Payload/
           
-       - name: Upload a Build Artifact
-         uses: actions/upload-artifact@v2.2.4
-         with:
+      - name: Upload a Build Artifact
+        uses: actions/upload-artifact@v2.2.4
+        with:
          name: Manticore.ipa
          path: "Manticore.ipa"
