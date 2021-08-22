@@ -1,6 +1,0 @@
-version: "1"
-rules:
-  - base: amfid2
-    upstream: Manticore:amfid2
-    mergeMethod: merge
-    mergeUnstable: true
