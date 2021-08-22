@@ -11,5 +11,14 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: 
-        run: 
+      - name: Build
+        run: |
+          xcodebuild build PRODUCT_BUNDLE_IDENTIFIER='com.Tanbeer191.manticore' CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED="NO"
+          mkdir Payload
+          cp -r build/Release-iphoneos/manticore.app Payload/
+          zip -vr Manticore.ipa Payload/
+          
+       - name: Upload a Build Artifact
+         uses: actions/upload-artifact@v2.2.3
+         with:
+         name: Manticore 
