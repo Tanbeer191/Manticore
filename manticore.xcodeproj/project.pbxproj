@@ -38,7 +38,6 @@
 		23C7054525DB2F220078DC37 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 23C7053D25DB2F220078DC37 /* README.md */; };
 		23C7054625DB2F220078DC37 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 23C7053E25DB2F220078DC37 /* LICENSE */; };
 		23C7054E25DB2F790078DC37 /* jailbreak.mm in Sources */ = {isa = PBXBuildFile; fileRef = 23C7054D25DB2F790078DC37 /* jailbreak.mm */; };
-		23F435B7263C978000CC3FFC /* pac.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F435B6263C978000CC3FFC /* pac.m */; };
 		847FD25A25F5911C007ED933 /* offset_finder.mm in Sources */ = {isa = PBXBuildFile; fileRef = 847FD25925F5911C007ED933 /* offset_finder.mm */; };
 		848C426825F461DB00842110 /* log.mm in Sources */ = {isa = PBXBuildFile; fileRef = 848C426725F461DB00842110 /* log.mm */; };
 		848C427825F47DC800842110 /* plistutils.mm in Sources */ = {isa = PBXBuildFile; fileRef = 848C427725F47DC800842110 /* plistutils.mm */; };
@@ -115,11 +114,9 @@
 		23C7053E25DB2F220078DC37 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		23C7054D25DB2F790078DC37 /* jailbreak.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = jailbreak.mm; sourceTree = "<group>"; };
 		23C7055225DB2F820078DC37 /* jailbreak.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = jailbreak.h; sourceTree = "<group>"; };
-		23F435B6263C978000CC3FFC /* pac.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = pac.m; path = manticore/Jailbreak/pac.m; sourceTree = SOURCE_ROOT; };
 		23F435B8263C978E00CC3FFC /* pac.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pac.h; sourceTree = "<group>"; };
 		8112CA2325F6C681001A3D83 /* manticore.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = manticore.entitlements; sourceTree = "<group>"; };
 		8112CA2525F6C8B8001A3D83 /* Kernel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kernel.framework; path = ../../../../System/Library/Frameworks/Kernel.framework; sourceTree = "<group>"; };
-		8413C62725F48FBA00A9A70A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		8419843825F4868B001DA7FE /* sys_vers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sys_vers.h; sourceTree = "<group>"; };
 		8419843925F486C2001DA7FE /* alloc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = alloc.h; sourceTree = "<group>"; };
 		8419843B25F48731001DA7FE /* file.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = file.h; sourceTree = "<group>"; };
@@ -188,19 +185,10 @@
 		231D241225DD35A4003C09FB /* lib */ = {
 			isa = PBXGroup;
 			children = (
-				23467B3B25F91D220083FCAE /* manticore */,
-				8413C62425F48FA500A9A70A /* jelbrekLib */,
 				23652AFB25E7ABCF004D7F7E /* pattern_f */,
 				230215FF25DE93AD003E7C5C /* snappy */,
 			);
 			path = lib;
-			sourceTree = "<group>";
-		};
-		23467B3B25F91D220083FCAE /* manticore */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = manticore;
 			sourceTree = "<group>";
 		};
 		23652AFB25E7ABCF004D7F7E /* pattern_f */ = {
@@ -274,7 +262,6 @@
 				230215FA25DE8E8F003E7C5C /* rootfs.mm */,
 				2302161A25DEA254003E7C5C /* utils.mm */,
 				2302162D25DEA566003E7C5C /* kernel_utils.mm */,
-				23F435B6263C978000CC3FFC /* pac.m */,
 			);
 			path = jailbreak;
 			sourceTree = "<group>";
@@ -285,14 +272,6 @@
 				847FD25925F5911C007ED933 /* offset_finder.mm */,
 			);
 			path = offset_finder;
-			sourceTree = "<group>";
-		};
-		8413C62425F48FA500A9A70A /* jelbrekLib */ = {
-			isa = PBXGroup;
-			children = (
-				8413C62725F48FBA00A9A70A /* README.md */,
-			);
-			path = jelbrekLib;
 			sourceTree = "<group>";
 		};
 		8419843E25F48984001DA7FE /* offset_finder */ = {
@@ -584,7 +563,6 @@
 				23652B1525E7ADA9004D7F7E /* k_utils.c in Sources */,
 				2302161B25DEA254003E7C5C /* utils.mm in Sources */,
 				23C7054025DB2F220078DC37 /* cicuta_virosa.c in Sources */,
-				23F435B7263C978000CC3FFC /* pac.m in Sources */,
 				848C427825F47DC800842110 /* plistutils.mm in Sources */,
 				848C426825F461DB00842110 /* log.mm in Sources */,
 				230215FB25DE8E8F003E7C5C /* rootfs.mm in Sources */,
@@ -747,7 +725,7 @@
 				CODE_SIGN_ENTITLEMENTS = manticore/manticore.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 0.0.1;
-				DEVELOPMENT_TEAM = 3LJ9H6BD56;
+				DEVELOPMENT_TEAM = 423J45LL22;
 				ENABLE_BITCODE = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/manticore/include",
@@ -767,7 +745,7 @@
 				);
 				MARKETING_VERSION = 0.1;
 				OTHER_LDFLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = com.rpwnage.manticore;
+				PRODUCT_BUNDLE_IDENTIFIER = com.geosn0w.manticore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WARNING_CFLAGS = "-Wunused";
@@ -787,7 +765,7 @@
 				CODE_SIGN_ENTITLEMENTS = manticore/manticore.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 0.0.1;
-				DEVELOPMENT_TEAM = 3LJ9H6BD56;
+				DEVELOPMENT_TEAM = 423J45LL22;
 				ENABLE_BITCODE = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/manticore/include",
@@ -807,7 +785,7 @@
 				);
 				MARKETING_VERSION = 0.1;
 				OTHER_LDFLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = com.rpwnage.manticore;
+				PRODUCT_BUNDLE_IDENTIFIER = com.geosn0w.manticore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WARNING_CFLAGS = "-Wunused";
